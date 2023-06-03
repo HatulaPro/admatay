@@ -35,7 +35,7 @@ export default function Home() {
 						className="done absolute h-full border-r-2 rounded-l-md inset-0 transition-opacity opacity-50 group-hover:opacity-100"
 						style={{ width: donePercent + '%' }}
 					>
-						<p className="text-sm absolute top-full pt-2 ml-0.5 -translate-x-1/2 left-full opacity-0 transition-opacity group-hover:opacity-100 text-blue-400 w-full">
+						<p className="text-sm absolute top-full pt-2 ml-0.5 -translate-x-1/2 left-full opacity-0 transition-opacity group-hover:opacity-100 text-blue-400 w-max">
 							{/* eslint-disable-next-line */}
 							<img
 								className="w-4 mx-auto mb-2"
