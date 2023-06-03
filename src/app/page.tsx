@@ -54,21 +54,17 @@ export default function Home() {
 				</p>
 			</div>
 
-			<div className="grid sm:grid-cols-3 grid-cols-1 gap-8 pt-20">
+			<div className="grid sm:grid-cols-3 text-center grid-cols-1 gap-8 pt-20">
 				<div className="bg-purple-900 bg-opacity-75 p-6 rounded-lg">
-					<h2 className="text-2xl mb-6 font-bold text-center">
-						{weeksSurvived}
-					</h2>
+					<h2 className="text-2xl mb-6 font-bold">{weeksSurvived}</h2>
 					<p>Weeks survived</p>
 				</div>
 				<div className="bg-purple-900 bg-opacity-75 p-6 rounded-lg">
-					<h2 className="text-2xl mb-6 font-bold text-center">
-						{daysLeft}
-					</h2>
+					<h2 className="text-2xl mb-6 font-bold">{daysLeft}</h2>
 					<p>Days until we leave</p>
 				</div>
 				<div className="bg-purple-900 bg-opacity-75 p-6 rounded-lg">
-					<h2 className="text-2xl mb-6 font-bold text-center">1</h2>
+					<h2 className="text-2xl mb-6 font-bold">1</h2>
 					<p>Sports days to win</p>
 				</div>
 			</div>
