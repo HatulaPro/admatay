@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const MILLIS_IN_DAY = 1000 * 60 * 60 * 24;
 
 export default function Home() {
@@ -36,10 +38,12 @@ export default function Home() {
 						style={{ width: donePercent + '%' }}
 					>
 						<p className="text-sm absolute top-full pt-2 ml-0.5 -translate-x-1/2 left-full opacity-0 transition-opacity group-hover:opacity-100 text-blue-400 w-max">
-							{/* eslint-disable-next-line */}
-							<img
-								className="w-4 mx-auto mb-2"
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Red_Arrow_Up.svg/1200px-Red_Arrow_Up.svg.png"
+							<Image
+								className="mx-auto mb-2"
+								src="/arrow.png"
+								width={16}
+								height={16}
+								alt="Up Arrow"
 							/>
 							You are here
 							<br />
