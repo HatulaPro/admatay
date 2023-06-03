@@ -1,7 +1,7 @@
 const MILLIS_IN_DAY = 1000 * 60 * 60 * 24;
 
 export default function Home() {
-	const startTime = new Date('2023-05-02T21:00:00.000Z');
+	const startTime = new Date('2023-05-03T21:00:00.000Z');
 	const currentTime = new Date();
 	const endTime = new Date('2023-09-28T21:00:00.000Z');
 
