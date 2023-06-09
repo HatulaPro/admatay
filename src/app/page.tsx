@@ -1,24 +1,12 @@
 import Image from 'next/image';
-import type { InferGetStaticPropsType } from 'next';
 
-export async function getStaticProps() {
-	const currentTime = new Date();
-
-	return {
-		props: {
-			currentTime,
-		},
-		revalidate: 1200,
-	};
-}
+export const revalidate = 1200;
 
 const MILLIS_IN_DAY = 1000 * 60 * 60 * 24;
 
-export default function Home({
-	currentTime,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home() {
 	const startTime = new Date('2023-05-03T21:00:00.000Z');
-	currentTime = new Date(currentTime);
+	const currentTime = new Date();
 	const endTime = new Date('2023-09-28T21:00:00.000Z');
 
 	const donePercent =
