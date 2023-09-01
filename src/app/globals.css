@@ -20,6 +20,19 @@ body {
 	animation: gradient 3s ease infinite;
 }
 
+.slide {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 100vw;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	font-size: 96px;
+	position: fixed;
+	text-align: center;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 150% 50%;
@@ -27,4 +40,128 @@ body {
 	100% {
 		background-position: -15% 50%;
 	}
+}
+
+@keyframes animate-position {
+	0% {
+		transform: translateX(var(--animate-enter-x-start))
+			translateY(var(--animate-enter-y-start));
+	}
+	5% {
+		opacity: 1;
+	}
+	10% {
+		transform: translateX(var(--animate-enter-x-end))
+			translateY(var(--animate-enter-y-end));
+	}
+	90% {
+		transform: translateX(var(--animate-leave-x-start))
+			translateY(var(--animate-leave-y-start));
+		opacity: 1;
+	}
+	98% {
+		transform: translateX(var(--animate-leave-x-end))
+			translateY(var(--animate-leave-y-end));
+	}
+	100% {
+		opacity: var(--low-opacity);
+	}
+}
+
+.animate-pos {
+	opacity: 0;
+	animation: animate-position var(--duration) forwards var(--hide-for);
+}
+
+.animate-pos.from-top {
+	--animate-enter-y-start: -100vh;
+	--animate-enter-y-end: 0;
+	--animate-enter-x-start: 0;
+	--animate-enter-x-end: 0;
+}
+
+.animate-pos.from-bottom {
+	--animate-enter-y-start: 100vh;
+	--animate-enter-y-end: 0;
+	--animate-enter-x-start: 0;
+	--animate-enter-x-end: 0;
+}
+
+.animate-pos.from-left {
+	--animate-enter-y-start: 0;
+	--animate-enter-y-end: 0;
+	--animate-enter-x-start: -100vw;
+	--animate-enter-x-end: 0;
+}
+
+.animate-pos.from-right {
+	--animate-enter-y-start: 0;
+	--animate-enter-y-end: 0;
+	--animate-enter-x-start: 100vw;
+	--animate-enter-x-end: 0;
+}
+
+.animate-pos.to-top {
+	--animate-leave-y-start: 0;
+	--animate-leave-y-end: -100vh;
+	--animate-leave-x-start: 0;
+	--animate-leave-x-end: 0;
+}
+
+.animate-pos.to-bottom {
+	--animate-leave-y-start: 0;
+	--animate-leave-y-end: 100vh;
+	--animate-leave-x-start: 0;
+	--animate-leave-x-end: 0;
+}
+
+.animate-pos.to-left {
+	--animate-leave-y-start: 0;
+	--animate-leave-y-end: 0;
+	--animate-leave-x-start: 0;
+	--animate-leave-x-end: -100vw;
+}
+
+.animate-pos.to-right {
+	--animate-leave-y-start: 0;
+	--animate-leave-y-end: 0;
+	--animate-leave-x-start: 0;
+	--animate-leave-x-end: 100vw;
+}
+
+.animated-moving-image-1,
+.animated-moving-image-2,
+.animated-moving-image-3 {
+	width: 5rem;
+	animation: moving-image 1s alternate-reverse;
+	animation-iteration-count: infinite;
+	position: fixed;
+}
+.animated-moving-image-2 {
+	animation-delay: 0.33s;
+}
+.animated-moving-image-3 {
+	animation-delay: 0.67s;
+}
+
+@keyframes moving-image {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes yellow-blink-animation {
+	0% {
+		color: yellow;
+	}
+	100% {
+		color: white;
+	}
+}
+
+.yellow-blink {
+	animation: yellow-blink-animation 0.5s alternate-reverse infinite;
 }
