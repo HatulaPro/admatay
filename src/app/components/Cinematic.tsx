@@ -126,7 +126,7 @@ const script = [
 		Content: () => (
 			<>
 				<p>
-					<u className="yellow-blink" style={{ fontSize: '156px' }}>
+					<u className="yellow-blink very-large-text">
 						<TextOverTime
 							script={[
 								['יום ', 400],
@@ -266,7 +266,7 @@ const script = [
 		duration: 6000,
 		Content: () => (
 			<>
-				<img src="/trophy.png" alt="trophy" className="h-60" />
+				<img src="/trophy.png" alt="trophy" className="md:h-60 h-40" />
 				<p>
 					<TextOverTime
 						script={[
@@ -293,7 +293,7 @@ const script = [
 						script={[
 							[
 								() => (
-									<b className="hantar fixed top-1/2 left-1/2">
+									<b className="hantar very-large-text fixed top-1/2 left-1/2">
 										חנת&quot;ר
 									</b>
 								),
@@ -317,7 +317,7 @@ export const Cinematic = ({ close }: { close: () => void }) => {
 			{script.map((value, index) => (
 				<div
 					key={index}
-					className={`slide animate-pos from-${value.from} to-${value.to}`}
+					className={`slide large-text animate-pos from-${value.from} to-${value.to}`}
 					style={
 						{
 							'--hide-for': `${value.startsAt}ms`,

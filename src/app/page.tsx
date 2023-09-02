@@ -62,11 +62,17 @@ export default function Home() {
 			</div>
 
 			<div className="grid sm:grid-cols-3 text-center place-items-center grid-cols-1 gap-8 pt-20">
-				<div className="bg-purple-900 bg-opacity-75 p-6 rounded-lg">
+				<div
+					className="bg-purple-900 bg-opacity-75 p-6 rounded-lg"
+					style={{ width: '-webkit-fill-available' }}
+				>
 					<h2 className="text-2xl mb-6 font-bold">{weeksSurvived}</h2>
 					<p>Weeks survived</p>
 				</div>
-				<div className="bg-purple-900 bg-opacity-75 p-6 rounded-lg">
+				<div
+					className="bg-purple-900 bg-opacity-75 p-6 rounded-lg"
+					style={{ width: '-webkit-fill-available' }}
+				>
 					<h2 className="text-2xl mb-6 font-bold">{daysLeft}</h2>
 					<p>Days until we leave</p>
 				</div>

@@ -28,9 +28,25 @@ body {
 	height: 100%;
 	display: grid;
 	place-items: center;
-	font-size: 96px;
 	position: fixed;
 	text-align: center;
+}
+
+.large-text {
+	font-size: 96px;
+}
+
+.very-large-text {
+	font-size: 156px;
+}
+
+@media only screen and (max-width: 600px) {
+	.large-text {
+		font-size: 72px;
+	}
+	.very-large-text {
+		font-size: 96px;
+	}
 }
 
 @keyframes gradient {
@@ -184,10 +200,9 @@ body {
 }
 
 .hantar {
-	font-size: 200px;
 	color: yellow;
 	text-shadow: 0.5rem 0.5rem 0.5rem black;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.8);
 	width: 200vw;
 	height: 200vh;
 	display: grid;

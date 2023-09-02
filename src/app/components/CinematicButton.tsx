@@ -25,6 +25,7 @@ export const CinematicButton = () => {
 				type="button"
 				className="bg-purple-900 bg-opacity-75 p-6 rounded-lg hover:bg-purple-950"
 				onClick={() => setShowCinematic(true)}
+				style={{ width: '-webkit-fill-available' }}
 			>
 				<img
 					src="/play.png"
@@ -32,7 +33,7 @@ export const CinematicButton = () => {
 					className="w-12 mx-auto py-1"
 					style={{ filter: 'invert(1)' }}
 				/>
-				Show Cinematic
+				Watch Cinematic
 			</button>
 			{showCinematic && (
 				<Cinematic close={() => setShowCinematic(false)} />
