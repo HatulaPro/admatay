@@ -187,21 +187,26 @@ body {
 	font-size: 200px;
 	color: yellow;
 	text-shadow: 0.5rem 0.5rem 0.5rem black;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.6);
 	width: 200vw;
 	height: 200vh;
 	display: grid;
 	place-items: center;
-	animation: wiggle 1s alternate-reverse infinite forwards;
+	animation: wiggle 1.5s forwards;
 	animation-timing-function: linear;
-	transform-origin: top left;
+	animation-delay: var(--delay);
+	transform: translateX(-50%) translateY(-50%);
+	transform-origin: center;
+	opacity: 0;
 }
 
 @keyframes wiggle {
 	0% {
-		transform: rotate(-2deg) translateX(-50%) translateY(-50%);
+		transform: skew(-30deg) translateX(-50%) translateY(-50%);
+		opacity: 0;
 	}
 	100% {
-		transform: rotate(2deg) translateX(-50%) translateY(-50%);
+		transform: skew(0deg) translateX(-50%) translateY(-50%);
+		opacity: 1;
 	}
 }

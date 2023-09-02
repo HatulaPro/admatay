@@ -122,7 +122,7 @@ const script = [
 			background: '#191919',
 		},
 		startsAt: 15000,
-		duration: 3000,
+		duration: 3500,
 		Content: () => (
 			<>
 				<p>
@@ -165,7 +165,7 @@ const script = [
 		css: {
 			background: '#2b2a1e',
 		},
-		startsAt: 18000,
+		startsAt: 18500,
 		duration: 3500,
 		Content: () => (
 			<TextOverTime
@@ -175,7 +175,7 @@ const script = [
 					['התחרות ', 500],
 					['צמודה ', 700],
 				]}
-				initialDelay={18000}
+				initialDelay={18500}
 			/>
 		),
 	},
@@ -185,7 +185,7 @@ const script = [
 		css: {
 			background: '#f51800',
 		},
-		startsAt: 21000,
+		startsAt: 21500,
 		duration: 2000,
 		Content: () => <>האדומים</>,
 	},
@@ -195,7 +195,7 @@ const script = [
 		css: {
 			background: '#00a30b',
 		},
-		startsAt: 22500,
+		startsAt: 23000,
 		duration: 2000,
 		Content: () => <>והירוקים</>,
 	},
@@ -205,7 +205,7 @@ const script = [
 		css: {
 			background: '#36341c',
 		},
-		startsAt: 24000,
+		startsAt: 24500,
 		duration: 3000,
 		Content: () => (
 			<TextOverTime
@@ -213,7 +213,7 @@ const script = [
 					['יתנו ', 200],
 					['הכל ', 800],
 				]}
-				initialDelay={24000}
+				initialDelay={24500}
 			/>
 		),
 	},
@@ -223,7 +223,7 @@ const script = [
 		css: {
 			background: 'black',
 		},
-		startsAt: 26000,
+		startsAt: 26500,
 		duration: 3000,
 		Content: () => (
 			<TextOverTime
@@ -232,7 +232,7 @@ const script = [
 					['המקום ', 400],
 					['ה-#2 ', 900],
 				]}
-				initialDelay={26000}
+				initialDelay={26500}
 			/>
 		),
 	},
@@ -242,7 +242,7 @@ const script = [
 		css: {
 			background: 'black',
 		},
-		startsAt: 27500,
+		startsAt: 28000,
 		duration: 4000,
 		Content: () => (
 			<TextOverTime
@@ -251,7 +251,7 @@ const script = [
 					['כי ', 400],
 					['הפעם', 900],
 				]}
-				initialDelay={28000}
+				initialDelay={28500}
 			/>
 		),
 	},
@@ -262,7 +262,7 @@ const script = [
 			background: '#d6c300',
 			'--low-opacity': 1,
 		},
-		startsAt: 28000,
+		startsAt: 29000,
 		duration: 6000,
 		Content: () => (
 			<>
@@ -273,7 +273,7 @@ const script = [
 							['הגביע ', 500],
 							[() => <b>הזהוב?</b>, 800],
 						]}
-						initialDelay={30000}
+						initialDelay={30500}
 					/>
 					<TextOverTime
 						script={[
@@ -287,7 +287,7 @@ const script = [
 								1000,
 							],
 						]}
-						initialDelay={31500}
+						initialDelay={32000}
 					/>
 					<TextOverTime
 						script={[
@@ -300,7 +300,7 @@ const script = [
 								0,
 							],
 						]}
-						initialDelay={35500}
+						initialDelay={36000}
 					/>
 				</p>
 			</>
