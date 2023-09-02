@@ -42,6 +42,23 @@ body {
 	}
 }
 
+@keyframes hideText {
+	0%,
+	90% {
+		visibility: hidden;
+	}
+	100% {
+		visibility: visible;
+	}
+}
+
+.text-over-time {
+	animation: hideText 1s;
+	animation-delay: var(--delay);
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+
 @keyframes animate-position {
 	0% {
 		transform: translateX(var(--animate-enter-x-start))
@@ -164,4 +181,27 @@ body {
 
 .yellow-blink {
 	animation: yellow-blink-animation 0.5s alternate-reverse infinite;
+}
+
+.hantar {
+	font-size: 200px;
+	color: yellow;
+	text-shadow: 0.5rem 0.5rem 0.5rem black;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 200vw;
+	height: 200vh;
+	display: grid;
+	place-items: center;
+	animation: wiggle 1s alternate-reverse infinite forwards;
+	animation-timing-function: linear;
+	transform-origin: top left;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(-2deg) translateX(-50%) translateY(-50%);
+	}
+	100% {
+		transform: rotate(2deg) translateX(-50%) translateY(-50%);
+	}
 }

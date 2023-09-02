@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { TextOverTime } from './TextOverTime';
 
 const script = [
 	{
@@ -32,7 +33,17 @@ const script = [
 		},
 		startsAt: 4000,
 		duration: 2000,
-		Content: () => <>אז...</>,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['אז', 0],
+					['.', 200],
+					['.', 300],
+					['.', 400],
+				]}
+				initialDelay={4000}
+			/>
+		),
 	},
 	{
 		from: 'bottom',
@@ -42,7 +53,18 @@ const script = [
 		},
 		startsAt: 6000,
 		duration: 2500,
-		Content: () => <>שמעתי שיש לכם דבר חשוב</>,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['שמעתי ', 0],
+					['שיש ', 100],
+					['לכם ', 200],
+					['דבר ', 350],
+					['חשוב ', 500],
+				]}
+				initialDelay={5700}
+			/>
+		),
 	},
 	{
 		from: 'left',
@@ -52,7 +74,17 @@ const script = [
 		},
 		startsAt: 8000,
 		duration: 2500,
-		Content: () => <>הכי חשוב בקורס תכנות!</>,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['הכי ', 0],
+					['חשוב ', 150],
+					['בקורס ', 300],
+					['תכנות! ', 450],
+				]}
+				initialDelay={7700}
+			/>
+		),
 	},
 	{
 		from: 'bottom',
@@ -62,7 +94,16 @@ const script = [
 		},
 		startsAt: 9500,
 		duration: 3500,
-		Content: () => <>תזכירו לי מה קורה השבוע?</>,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['תזכירו ', 0],
+					['לי מה ', 150],
+					['קורה השבוע? ', 300],
+				]}
+				initialDelay={9500}
+			/>
+		),
 	},
 	{
 		from: 'top',
@@ -81,31 +122,40 @@ const script = [
 			background: '#191919',
 		},
 		startsAt: 15000,
-		duration: 4000,
+		duration: 3000,
 		Content: () => (
 			<>
 				<p>
-					&nbsp;יש לכם&nbsp;
-					<u className="yellow-blink">יום ספורט</u>
+					<u className="yellow-blink" style={{ fontSize: '156px' }}>
+						<TextOverTime
+							script={[
+								['יום ', 400],
+								['ספורט ', 700],
+							]}
+							initialDelay={15000}
+						/>
+					</u>
 				</p>
-				<img
-					style={{ top: '20%' }}
-					src="/football.png"
-					alt="football"
-					className="animated-moving-image-1"
-				/>
-				<img
-					style={{ top: '20%' }}
-					src="/basketball.png"
-					alt="basketball"
-					className="animated-moving-image-2"
-				/>
-				<img
-					style={{ top: '20%' }}
-					src="/frisbee.png"
-					alt="frisbee"
-					className="animated-moving-image-3"
-				/>
+				<div className="flex justify-evenly w-full md:w-3/5">
+					<img
+						className="h-20 animate-bounce delay-100"
+						style={{ animationDelay: '100ms' }}
+						src="/football.png"
+						alt="football"
+					/>
+					<img
+						className="h-20 animate-bounce delay-200"
+						style={{ animationDelay: '200ms' }}
+						src="/basketball.png"
+						alt="basketball"
+					/>
+					<img
+						className="h-20 animate-bounce"
+						style={{ animationDelay: '300ms' }}
+						src="/frisbee.png"
+						alt="frisbee"
+					/>
+				</div>
 			</>
 		),
 	},
@@ -117,7 +167,17 @@ const script = [
 		},
 		startsAt: 18000,
 		duration: 3500,
-		Content: () => <>ושמעתי שהפעם התחרות צמודה</>,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['אומרים ', 100],
+					['שהפעם ', 300],
+					['התחרות ', 500],
+					['צמודה ', 700],
+				]}
+				initialDelay={18000}
+			/>
+		),
 	},
 	{
 		from: 'top',
@@ -146,8 +206,16 @@ const script = [
 			background: '#36341c',
 		},
 		startsAt: 24000,
-		duration: 2000,
-		Content: () => <>יתנו הכל</>,
+		duration: 3000,
+		Content: () => (
+			<TextOverTime
+				script={[
+					['יתנו ', 200],
+					['הכל ', 800],
+				]}
+				initialDelay={24000}
+			/>
+		),
 	},
 	{
 		from: 'top',
@@ -155,12 +223,17 @@ const script = [
 		css: {
 			background: 'black',
 		},
-		startsAt: 25000,
+		startsAt: 26000,
 		duration: 3000,
 		Content: () => (
-			<>
-				<p>בשביל המקום ה #2</p>
-			</>
+			<TextOverTime
+				script={[
+					['בשביל ', 200],
+					['המקום ', 400],
+					['ה-#2 ', 900],
+				]}
+				initialDelay={26000}
+			/>
 		),
 	},
 	{
@@ -170,24 +243,16 @@ const script = [
 			background: 'black',
 		},
 		startsAt: 27500,
-		duration: 3000,
-		Content: () => <>פשוט כי הפעם</>,
-	},
-	{
-		from: 'right',
-		to: 'top',
-		css: {
-			background: '#d6c300',
-		},
-		startsAt: 29000,
-		duration: 2000,
+		duration: 4000,
 		Content: () => (
-			<>
-				<img src="/trophy.png" alt="trophy" className="h-60" />
-				<p>
-					הגביע <b>הזהוב</b>
-				</p>
-			</>
+			<TextOverTime
+				script={[
+					['פשוט ', 200],
+					['כי ', 400],
+					['הפעם', 900],
+				]}
+				initialDelay={28000}
+			/>
 		),
 	},
 	{
@@ -197,19 +262,46 @@ const script = [
 			background: '#d6c300',
 			'--low-opacity': 1,
 		},
-		startsAt: 30000,
+		startsAt: 28000,
 		duration: 6000,
 		Content: () => (
 			<>
 				<img src="/trophy.png" alt="trophy" className="h-60" />
 				<p>
-					הגביע <b>הזהוב</b>?
-					<br />
-					נשאר{' '}
-					<b>
-						<u>צהוב</u>
-					</b>
-					.
+					<TextOverTime
+						script={[
+							['הגביע ', 500],
+							[() => <b>הזהוב?</b>, 800],
+						]}
+						initialDelay={30000}
+					/>
+					<TextOverTime
+						script={[
+							['נשאר ', 500],
+							[
+								() => (
+									<b>
+										<u>צהוב.</u>
+									</b>
+								),
+								1000,
+							],
+						]}
+						initialDelay={31500}
+					/>
+					<TextOverTime
+						script={[
+							[
+								() => (
+									<b className="hantar fixed top-1/2 left-1/2">
+										חנת&quot;ר
+									</b>
+								),
+								0,
+							],
+						]}
+						initialDelay={35500}
+					/>
 				</p>
 			</>
 		),
