@@ -11,9 +11,9 @@ export default function Home() {
 	const endTime = new Date('2023-09-21T21:00:00.000Z');
 
 	const donePercent =
-		((currentTime.getTime() - startTime.getTime()) /
+		Math.max(((currentTime.getTime() - startTime.getTime()) /
 			(endTime.getTime() - startTime.getTime())) *
-		100;
+		100, 100);
 
 	const weeksSurvived = Math.floor(
 		(currentTime.getTime() - startTime.getTime()) / (MILLIS_IN_DAY * 7)
